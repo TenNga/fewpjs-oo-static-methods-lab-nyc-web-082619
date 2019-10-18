@@ -22,7 +22,7 @@ class Formatter {
         result.push(word.charAt(0).toUpperCase()+word.slice(1));
       
     })
-    console.log("Result....... "+result)
+    result[0] = result[0].charAt(0).toUpperCase()+result[0].slice(1)
     return result.join(" ");
   }
 }
