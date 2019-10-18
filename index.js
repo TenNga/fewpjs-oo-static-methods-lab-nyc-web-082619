@@ -11,13 +11,13 @@ class Formatter {
   static titleize(word){
     const wordArr = word.split(" ");
     const except = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by','from'];
-    let result = "";
+    let result = [];
     
     wordArr.forEach((word)=>{
       if(!except.includes(word)){
-        result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
+        result.push(word.charAt(0).toUpperCase()+word.slice(1));
       }
     })
-    return result;
+    return result.join(" ");
   }
 }
