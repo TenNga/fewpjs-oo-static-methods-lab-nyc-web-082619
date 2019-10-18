@@ -8,34 +8,16 @@ class Formatter {
     return word.replace(/[^a-z\ '-]/gim,"");
   }
   
-  // static titleize(word){
-  //   const wordArr = word.split(" ");
-  //   const except = [" ", "-", "'"];
-  //   let result = "";
+  static titleize(word){
+    const wordArr = word.split(" ");
+    const except = ["the"];
+    let result = "";
     
-  //   wordArr.forEach((word)=>{
-  //     if(!except.includes(word)){
-  //       result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
-  //     }
-  //   })
-  //   return result;
-  // }
-  static titleize( sentence ) {
-    let exceptions = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
-    let result = [];
-    let arrayOfWords = sentence.split( " " )
-    for ( let n = 0; n < arrayOfWords.length; n++ ) {
-      if ( n == 0 ) {
-        result.push( this.capitalize( arrayOfWords[ n ] ) )
-      } else {
-        if ( exceptions.includes( arrayOfWords[ n ] ) ) {
-          result.push( arrayOfWords[ n ] )
-        } else {
-          result.push( this.capitalize( arrayOfWords[ n ] ) )
-        }
+    wordArr.forEach((word)=>{
+      if(!except.includes(word)){
+        result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
       }
-
-    }
-    return result.join( " " );
+    })
+    return result;
   }
 }
