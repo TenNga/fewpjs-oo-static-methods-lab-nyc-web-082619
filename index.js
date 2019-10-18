@@ -14,9 +14,9 @@ class Formatter {
     let result = [];
     
     wordArr.forEach((word)=>{
-      if(!except.includes(word)){
+      if(!except.includes(word))
         result.push(word.charAt(0).toUpperCase()+word.slice(1));
-      }
+      
     })
     return result.join(" ");
   }
