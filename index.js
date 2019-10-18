@@ -17,7 +17,7 @@ class Formatter {
       if(!except.includes(word))
         result.push(word.charAt(0).toUpperCase()+word.slice(1));
       else
-        result.push(word);
+        
       
     })
     return result.join(" ");
