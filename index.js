@@ -10,7 +10,7 @@ class Formatter {
   
   static titleize(word){
     const wordArr = word.split(" ");
-    const except = ["the"];
+    const except = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by','from'];
     let result = "";
     
     wordArr.forEach((word)=>{
