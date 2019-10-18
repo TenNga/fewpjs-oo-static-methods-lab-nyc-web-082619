@@ -8,16 +8,16 @@ class Formatter {
     return word.replace(/[^a-z\ '-]/gim,"");
   }
   
-  static titleize(word){
-    const wordArr = word.split(" ");
-    const except = [" ", "-", "'"];
-    let result = "";
+  // static titleize(word){
+  //   const wordArr = word.split(" ");
+  //   const except = [" ", "-", "'"];
+  //   let result = "";
     
-    wordArr.forEach((word)=>{
-      if(!except.includes(word)){
-        result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
-      }
-    })
-    return result;
-  }
+  //   wordArr.forEach((word)=>{
+  //     if(!except.includes(word)){
+  //       result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
+  //     }
+  //   })
+  //   return result;
+  // }
 }
