@@ -14,7 +14,7 @@ class Formatter {
     let result = "";
     
     wordArr.forEach((word)=>{
-      if(!except.include(word)){
+      if(!except.includes(word)){
         result +=word.charAt(0).toUpperCase();
       }
     })
