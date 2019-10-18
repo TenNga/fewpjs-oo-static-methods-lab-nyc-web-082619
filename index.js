@@ -15,7 +15,7 @@ class Formatter {
     
     wordArr.forEach((word)=>{
       if(!except.includes(word)){
-        result +=word.charAt(0).toUpperCase()+" " +word.slice(1);
+        result +=word.charAt(0).toUpperCase()+word.slice(1)+" ";
       }
     })
     return result;
