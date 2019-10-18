@@ -7,4 +7,17 @@ class Formatter {
     //- ' space 
     return word.replace(/[^a-z\ '-]/gim,"");
   }
+  
+  static titleize(word){
+    const wordArr = word.split(" ");
+    const except = [" ", "-", "'"];
+    let result = "";
+    
+    wordArr.forEach((word)=>{
+      if(!except.include(word)){
+        result +=word.charAt(0).toUpperCase();
+      }
+    })
+    return result;
+  }
 }
