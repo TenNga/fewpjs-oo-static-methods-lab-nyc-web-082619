@@ -14,8 +14,10 @@ class Formatter {
     let result = [];
     
     wordArr.forEach((word)=>{
-      if(except.includes(word))
+      if(except.includes(word)){
+        console.log("word is: "+word)
         result.push(word);
+      }
       else
         result.push(word.charAt(0).toUpperCase()+word.slice(1));
       
